@@ -1,0 +1,16 @@
+# requirements.txt
+
+# Para a API
+fastapi
+uvicorn[standard]
+
+# Para configurações e modelos de dados
+pydantic
+pydantic-settings
+python-dotenv
+
+# Para a lógica do Chatbot
+langchain
+langchain-openai
+langchain-qdrant
+qdrant-client
