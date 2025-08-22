@@ -33,7 +33,8 @@ Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades 
 <img width="1898" height="942" alt="Captura de tela 2025-08-22 190021" src="https://github.com/user-attachments/assets/729af254-dbcf-4e3f-868c-1a438906dfb2" />
 
 
-#Autenticação & Infraestrutura
+# Autenticação & Infraestrutura
+
 🔑 Keycloak: Solução de gerenciamento de identidade e acesso (IAM).
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="20" /> Docker: Recomendado para rodar os serviços em ambiente de produção.
@@ -62,7 +63,9 @@ Streamlit
 
 Bancos de Dados
 
-PostgreSQL, Qdrant (Banco Vetorial)
+PostgreSQL
+
+Qdrant (Banco Vetorial)
 
 Autenticação
 
