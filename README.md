@@ -1,6 +1,9 @@
 # 🤖 Mbot - Assistente Corporativo com IA
 O Mbot é um assistente de IA conversacional projetado para otimizar o acesso a informações internas e acelerar processos de consulta as nossas bases de dados(Salesforce, SAP e Conhecimentos internos) para as diversas equipes da empresa incluindo o atendimento e suporte ao cliente.
 
+<img width="1896" height="945" alt="Captura de tela 2025-08-22 185903" src="https://github.com/user-attachments/assets/712da788-da07-4332-bfc9-1ef3aed85072" />
+
+
 # 🎯 Objetivo do Projeto
 O objetivo principal do Mbot é servir como um ponto central e inteligente de consulta para dúvidas sobre processos internos e dados de clientes. Ele capacita a equipe a obter respostas rápidas e precisas, diretamente de fontes de dados oficiais como o Salesforce, eliminando a necessidade de navegar por múltiplas telas ou consultar diferentes departamentos.
 
@@ -19,6 +22,9 @@ Fontes de Dados:
 
 PostgreSQL: Armazena dados relacionais (usuários, histórico de chats).
 
+<img width="1669" height="881" alt="Captura de tela 2025-08-22 190141" src="https://github.com/user-attachments/assets/e3fb7242-cae4-44b2-9426-6fec32235787" />
+
+
 Qdrant: Banco de dados vetorial para buscas semânticas em documentos de processos.
 
 Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades (OPs) e contatos.
@@ -31,6 +37,9 @@ Tecnologia
 Back-end
 
 FastAPI, LangChain, Pydantic, SQLAlchemy, Alembic
+
+<img width="1669" height="881" alt="Captura de tela 2025-08-22 190141" src="https://github.com/user-attachments/assets/458e8b55-8ece-4640-bbe4-3f96eaa170b5" />
+
 
 Front-end
 
@@ -48,48 +57,3 @@ Linguagem
 
 Python 3.10+
 
-# 🚀 Como Executar o Projeto
-Siga os passos abaixo para configurar e rodar o ambiente de desenvolvimento local.
-
-Pré-requisitos
-Python 3.10+
-
-Git
-
-Docker (recomendado para rodar os serviços de BD e Keycloak)
-
-1. Configuração do Back-end
-# Navegue até a pasta do back-end
-cd back-end-fast-api
-
-# Crie e ative um ambiente virtual (exemplo para Windows)
-python -m venv .venv
-.\.venv\Scripts\activate
-
-# Instale as dependências
-pip install -r requirements.txt
-
-# Crie e configure seu arquivo .env a partir do .env.example
-
-# Rode o servidor da API
-uvicorn api.main:app --reload
-
-O servidor estará rodando em http://localhost:8000.
-
-2. Configuração do Front-end
-# Em um NOVO terminal, navegue até a pasta do front-end
-cd front-end-stream-lit
-
-# Crie e ative um ambiente virtual (mesmos passos do back-end)
-python -m venv .venv
-.\.venv\Scripts\activate
-
-# Instale as dependências
-pip install -r requirements.txt
-
-# Crie e configure seu arquivo .env
-
-# Rode a aplicação Streamlit
-streamlit run main.py
-
-A aplicação estará acessível em http://localhost:8501 (ou na porta que você configurar).
