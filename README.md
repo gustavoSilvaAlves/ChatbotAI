@@ -26,7 +26,7 @@ Qdrant: Banco de dados vetorial para buscas semânticas em documentos de process
 
 Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades (OPs) e contatos.
 
-# Postgres
+# PostgreSQL
 
 <img width="1669" height="881" alt="Captura de tela 2025-08-22 190141" src="https://github.com/user-attachments/assets/e3fb7242-cae4-44b2-9426-6fec32235787" />
 
