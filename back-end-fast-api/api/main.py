@@ -11,9 +11,9 @@ from api.services.qdrant_service import QdrantChatService, qdrant_chat_service
 from api.services.salesforce_service import SalesforceChatService, salesforce_chat_service
 from api.security import get_current_user
 
-print("✅ [DEBUG] Tentando conectar ao BD e criar tabelas...") # <-- Adicione esta linha
+print("[DEBUG] Tentando conectar ao BD e criar tabelas...") # <-- Adicione esta linha
 models.Base.metadata.create_all(bind=engine)
-print("✅ [DEBUG] Conexão com BD e criação de tabelas OK.") # <-- Adicione esta linha
+print("[DEBUG] Conexão com BD e criação de tabelas OK.") # <-- Adicione esta linha
 
 # --- Instância e Configuração do FastAPI ---
 
@@ -143,7 +143,7 @@ async def chat_with_knowledge_base(
     # 4. Busca o histórico e chama o serviço
     history_from_request = request.history or []  # Linha nova
 
-    # 👇 E PASSE O NOVO HISTÓRICO PARA O SERVIÇO
+    # E PASSE O NOVO HISTÓRICO PARA O SERVIÇO
     result = await service.query(request.question, history_from_request, filtro_departamento)
 
     answer = result.get("answer")
