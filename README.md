@@ -43,9 +43,6 @@ Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades 
 
 🔑 Keycloak: Solução de gerenciamento de identidade e acesso (IAM).
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="20" /> Docker: Recomendado para rodar os serviços em ambiente de produção.
-
-
 # 🛠️ Tecnologias Utilizadas
 
 FastAPI
