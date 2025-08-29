@@ -43,101 +43,34 @@ Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades 
 
 🔑 Keycloak: Solução de gerenciamento de identidade e acesso (IAM).
 
-# 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-FastAPI
+| Categoria           | Tecnologia                             |
+| ------------------- | -------------------------------------- |
+| **Back-end** | FastAPI, Pydantic, SQLAlchemy, Alembic |
+| **IA & Orquestração** | LangChain                              |
+| **Front-end** | Streamlit                              |
+| **Bancos de Dados** | PostgreSQL, Qdrant (Banco Vetorial)    |
+| **Autenticação** | Keycloak (OIDC)                        |
+| **Linguagem** | Python 3.10+                           |
 
-LangChain
+## 📋 Pré-requisitos
 
-Pydantic
-
-SQLAlchemy
-
-Alembic
-
-Front-end
-
-Streamlit
-
-Bancos de Dados
-
-PostgreSQL
-
-Qdrant (Banco Vetorial)
-
-Autenticação
-
-Keycloak (OIDC)
-
-Linguagem
-
-Python 3.10+
-
-
-
-📋 Pré-requisitos
 Antes de começar, certifique-se de que tem os seguintes softwares instalados:
 
-Python 3.10+
+- [Python 3.10+](https://www.python.org/downloads/)
+- [Docker](https://www.docker.com/products/docker-desktop/) (Recomendado para correr PostgreSQL, Qdrant e Keycloak)
+- Git
 
-Docker (Recomendado para correr PostgreSQL, Qdrant e Keycloak)
+## 🚀 Como Executar o Projeto
 
-Git
-
-🚀 Como Executar o Projeto
 Siga estes passos para configurar e executar o projeto localmente.
 
-1. Clonar o Repositório
+### 1. Clonar o Repositório
+
+```bash
 git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
 cd seu-repositorio
-
-2. Configurar o Back-end
-# Navegar para a pasta do back-end
-cd back-end-fast-api
-
-# Criar um ambiente virtual
-python -m venv venv
-
-# Ativar o ambiente virtual
-# No Windows:
-.\venv\Scripts\Activate
-# No macOS/Linux:
-source venv/bin/activate
-
-# Criar e configurar o ficheiro .env
-cp .env.example .env
-# Preencha as variáveis em .env com as suas chaves e credenciais
-
-# Instalar as dependências
-pip install -r requirements.txt
-
-# Iniciar o servidor da API
-uvicorn api.main:app --reload --port 8000
-
-3. Configurar o Front-end
-# Abrir um novo terminal e navegar para a pasta do front-end
-cd front-end-stream-lit
-
-# Criar um ambiente virtual
-python -m venv venv
-
-# Ativar o ambiente virtual
-# No Windows:
-.\venv\Scripts\Activate
-# No macOS/Linux:
-source venv/bin/activate
-
-# Criar e configurar o ficheiro .env
-cp .env.example .env
-# Preencha as variáveis em .env com as suas configurações
-
-# Instalar as dependências
-pip install -r requirements.txt
-
-# Iniciar a aplicação Streamlit
-streamlit run src/app.py
-
-A aplicação front-end estará disponível em http://localhost:8501.
 
 📂 Estrutura do Projeto
 .
