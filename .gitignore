@@ -1,0 +1,49 @@
+Arquivos de Configuração de Ambiente Sensíveis
+Ignora todos os arquivos .env, como .env, .env.local, .env.development
+.env
+.env.*
+
+Mas NÃO ignora o arquivo de exemplo, que é seguro para compartilhar
+!*.env.example
+
+--- Outras regras de um bom .gitignore ---
+Ambientes Virtuais
+venv/
+.venv/
+env/
+
+Dependências e Cache do Python
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+Arquivos de IDEs
+.idea/
+.vscode/
+*.suo
+.ntvs
+*.njsproj
+*.sln
+*.sw?
+
+Arquivos do S.O.
+.DS_Store
+Thumbs.db
