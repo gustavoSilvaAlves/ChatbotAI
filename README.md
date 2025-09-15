@@ -1,8 +1,6 @@
 # 🤖 Mbot - Assistente Corporativo com IA
 O Mbot é um assistente de IA conversacional projetado para otimizar o acesso a informações internas e acelerar processos de consulta as nossas bases de dados(Salesforce, SAP e Conhecimentos internos) para as diversas equipes da empresa incluindo o atendimento e suporte ao cliente.
 
-<img width="1909" height="987" alt="Captura de tela 2025-08-29 184622" src="https://github.com/user-attachments/assets/c3c15a6f-a9cd-476e-b246-84a6ec5023fa" />
-
 # 🎯 Objetivo do Projeto
 O objetivo principal do Mbot é servir como um ponto central e inteligente de consulta para dúvidas sobre processos internos e dados de clientes. Ele capacita a equipe a obter respostas rápidas e precisas, diretamente de fontes de dados oficiais como o Salesforce, eliminando a necessidade de navegar por múltiplas telas ou consultar diferentes departamentos.
 
@@ -25,56 +23,33 @@ Qdrant: Banco de dados vetorial para buscas semânticas em documentos de process
 
 Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades (OPs) e contatos.
 
-# PostgreSQL
+# 🛠️ Tecnologias Utilizadas
 
-<img width="1170" height="762" alt="Captura de tela 2025-08-29 184722" src="https://github.com/user-attachments/assets/936524b5-5b49-485f-83bf-2a41e4e78b6a" />
+FastAPI
 
-# Qdrant
+LangChain
 
-<img width="1824" height="844" alt="Captura de tela 2025-08-29 185001" src="https://github.com/user-attachments/assets/12bd5426-9343-438f-bcc0-bf272f95b3a4" />
+Pydantic
 
-# FastAPI
+SQLAlchemy
 
-<img width="1901" height="951" alt="Captura de tela 2025-08-29 184635" src="https://github.com/user-attachments/assets/3d28d50b-ca13-44ea-8b79-d77da8ece2ad" />
+Alembic
 
-# Autenticação & Infraestrutura
+Front-end
 
-🔑 Keycloak: Solução de gerenciamento de identidade e acesso (IAM).
+Streamlit
 
-## 🛠️ Tecnologias Utilizadas
+Bancos de Dados
 
-| Categoria           | Tecnologia                             |
-| ------------------- | -------------------------------------- |
-| **Back-end** | FastAPI, Pydantic, SQLAlchemy, Alembic |
-| **IA & Orquestração** | LangChain                              |
-| **Front-end** | Streamlit                              |
-| **Bancos de Dados** | PostgreSQL, Qdrant (Banco Vetorial)    |
-| **Autenticação** | Keycloak (OIDC)                        |
-| **Linguagem** | Python 3.10+                           |
+PostgreSQL
 
-## 📋 Pré-requisitos
+Qdrant (Banco Vetorial)
 
-Antes de começar, certifique-se de que tem os seguintes softwares instalados:
+Autenticação
 
-- [Python 3.10+](https://www.python.org/downloads/)
-- [Docker](https://www.docker.com/products/docker-desktop/) (Recomendado para correr PostgreSQL, Qdrant e Keycloak)
-- Git
+Keycloak (OIDC)
 
-## 🚀 Como Executar o Projeto
+Linguagem
 
-Siga estes passos para configurar e executar o projeto localmente.
-
-### 1. Clonar o Repositório
-
-```bash
-git clone [[https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)](https://github.com/gustavoSilvaAlves/ChatbotAI.git)
-cd seu-repositorio
-
-📂 Estrutura do Projeto
-.
-├── back-end-fast-api/    # Projeto da API com FastAPI
-├── front-end-stream-lit/ # Projeto da interface com Streamlit
-├── .gitignore            # Ficheiros e pastas a serem ignorados pelo Git
-└── README.md             # Este ficheiro
-
+Python 3.10+
 

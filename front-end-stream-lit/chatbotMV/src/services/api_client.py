@@ -10,7 +10,7 @@ def sync_user_with_backend():
         response = requests.post(f"{config.API_BASE_URL}/users/sync", headers=headers)
         response.raise_for_status()
         st.session_state.user_synced = True
-        print("Usuário sincronizado com o back-end com sucesso.")
+
     except requests.RequestException as e:
         st.error(f"Falha ao sincronizar usuário com o back-end: {e}")
         st.stop()
@@ -24,7 +24,7 @@ def create_new_chat_session(title="Nova Conversa"):
         response.raise_for_status()
         chat_data = response.json()
         st.session_state.chat_id = chat_data["id"]
-        print(f"Nova sessão de chat criada com ID: {st.session_state.chat_id}")
+
     except requests.RequestException as e:
         st.error(f"Não foi possível iniciar uma nova conversa: {e}")
         st.stop()

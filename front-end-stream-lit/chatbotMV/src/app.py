@@ -26,19 +26,26 @@ chat_interface.display_chat_messages()
 
 # 5. Lógica do chat input
 if prompt := st.chat_input("Em que posso te ajudar?"):
-    # Adiciona e exibe a mensagem do usuário
+
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # Cria uma nova sessão de chat se for a primeira mensagem
+
     if "chat_id" not in st.session_state:
         api_client.create_new_chat_session(title=prompt[:100])
 
-    # Envia a pergunta para o back-end e exibe a resposta
+
     if "chat_id" in st.session_state:
         with st.spinner("Pensando..."):
-            endpoint = "/chat/knowledge_base" if assistant_type == "Base de Conhecimento" else "/chat/salesforce"
+
+            if assistant_type == "Base de Conhecimento":
+                endpoint = "/chat/knowledge_base"
+            elif assistant_type == "Salesforce":
+                endpoint = "/chat/salesforce"
+            else:
+                # Opção padrão para segurança
+                endpoint = "/chat/knowledge_base"
             history = chat_interface.get_chat_history_for_api()
 
             response_data = api_client.post_question_to_backend(

@@ -21,14 +21,13 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(o
 
     try:
 
-        print("\n[DEBUG 1] Buscando chaves de segurança do Keycloak...")
         jwks_client = requests.get(KEYCLOAK_CERTS_URL)
         jwks_client.raise_for_status()
         jwks = jwks_client.json()
-        print("[DEBUG 2] Chaves obtidas com sucesso.")
 
 
-        print("[DEBUG 3] Lendo o cabeçalho do token para encontrar o Key ID (kid)...")
+
+
         unverified_header = jwt.get_unverified_header(token)
         rsa_key = {}
         for key in jwks["keys"]:
@@ -37,12 +36,9 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(o
                 break
 
         if not rsa_key:
-            print("[ERRO FATAL] Key ID (kid) do token não encontrado nas chaves do Keycloak!")
+
             raise credentials_exception
-        print("[DEBUG 4] Chave de assinatura encontrada no JWKS.")
 
-
-        print("[DEBUG 5] Tentando decodificar e validar o token (assinatura, issuer)...")
         payload = jwt.decode(
             token,
             rsa_key,
@@ -55,7 +51,7 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(o
         allowed_clients = [settings.KEYCLOAK_CLIENT_ID, "streamlit-frontend"]
 
         if authorized_party not in allowed_clients:
-            print(f"[ERRO DE AUTORIZAÇÃO] O cliente '{authorized_party}' não tem permissão para usar esta API.")
+
             raise credentials_exception
 
         username: str = payload.get("preferred_username")
@@ -66,5 +62,4 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(o
 
     except (JWTError, requests.exceptions.RequestException, KeyError) as e:
 
-        print(f"\n[ERRO DE VALIDAÇÃO] A exceção foi: {e}\n")
         raise credentials_exception

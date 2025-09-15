@@ -5,12 +5,14 @@ from api.db import models, crud
 from api.db.database import SessionLocal, engine
 from api.models.chat_models import ChatRequest, ChatResponse, UserResponse, ChatCreate, ChatDetailResponse
 from api.services.qdrant_service import QdrantChatService, qdrant_chat_service
+
+
 from api.services.salesforce_service import SalesforceChatService, salesforce_chat_service
 from api.security import get_current_user
 
-print("[DEBUG] Tentando conectar ao BD e criar tabelas...")
+
 models.Base.metadata.create_all(bind=engine)
-print("[DEBUG] Conexão com BD e criação de tabelas OK.")
+
 
 
 
@@ -96,11 +98,6 @@ async def chat_with_knowledge_base(
         user_claims: dict = Depends(get_current_user)
 ):
 
-    print("\n--- [BACK-END API] Requisição Recebida ---")
-    print(f"Chat ID: {request.chat_id}")
-    print(f"Question: {request.question}")
-    print(f"History: {request.history}")
-    print("-----------------------------------------\n")
 
     groups = user_claims.get("groups", [])
     if not groups:
@@ -116,11 +113,9 @@ async def chat_with_knowledge_base(
 
     if departamento_usuario.lower() == 'admin':
         filtro_departamento = None
-        print("INFO: Usuário Admin detectado. Realizando busca global.")
     else:
-
         filtro_departamento = departamento_usuario
-        print(f"INFO: Usuário do departamento '{filtro_departamento}'. Aplicando filtro.")
+
 
 
     chat = crud.get_chat_owner(db, chat_id=request.chat_id)
@@ -151,39 +146,34 @@ async def chat_with_knowledge_base(
     )
 
 
-
 @app.post("/chat/salesforce", response_model=ChatResponse, tags=["Chat"])
 async def chat_with_salesforce(
         request: ChatRequest,
         db: Session = Depends(get_db),
-        service: SalesforceChatService = Depends(get_salesforce_service),
+        service: SalesforceChatService  = Depends(get_salesforce_service),
         user_claims: dict = Depends(get_current_user)
 ):
-
-
-
+    # A lógica de verificação de chat e usuário é a mesma
     chat = crud.get_chat_owner(db, chat_id=request.chat_id)
     if not chat:
         raise HTTPException(status_code=404, detail="Chat não encontrado.")
 
-
     if chat.usuario.keycloak_id != user_claims.get("sub"):
         raise HTTPException(status_code=403, detail="Usuário não autorizado para este chat.")
 
-
-
-
+    # Salva a mensagem do usuário no DB
     crud.create_message(db, chat_id=request.chat_id, autor="usuario", conteudo=request.question)
 
-    result = await service.query(request)
+    # Chama o novo serviço
+    history_from_request = request.history or []
+    result = await service.query(request.question, history_from_request)
     answer = result.get("answer")
-    soql_query = result.get("soql_query")
 
+    # Salva a resposta do bot no DB
     if answer:
         crud.create_message(db, chat_id=request.chat_id, autor="bot", conteudo=answer)
 
     return ChatResponse(
         answer=answer,
-        soql_query=soql_query,
-        source_documents=[]
+        source_documents=[]  # O agente ReAct não fornece fontes da mesma forma
     )

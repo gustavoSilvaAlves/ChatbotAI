@@ -73,10 +73,10 @@ def _refresh_access_token():
         st.session_state.token = token_data["access_token"]
         st.session_state.refresh_token = token_data.get("refresh_token")
         st.session_state.token_exp_time = time.time() + token_data["expires_in"] - 30
-        print("Token renovado com sucesso!")
+
         return True
     else:
-        print("Falha ao renovar o token. Forçando novo login.")
+
         for key in list(st.session_state.keys()):
             del st.session_state[key]
         st.rerun()

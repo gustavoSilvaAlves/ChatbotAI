@@ -24,7 +24,6 @@ CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template(_template)
 
 class QdrantChatService:
     def __init__(self):
-        print("[DEBUG] Iniciando __init__ do QdrantChatService...")
         self.qdrant_client = QdrantClient(host=settings.QDRANT_HOST, port=settings.QDRANT_PORT)
         self.embeddings = OpenAIEmbeddings(model="text-embedding-3-small", openai_api_key=settings.OPENAI_API_KEY)
         self.llm = ChatOpenAI(temperature=0.7, openai_api_key=settings.OPENAI_API_KEY)
@@ -52,7 +51,6 @@ class QdrantChatService:
         """
         self.QA_PROMPT = PromptTemplate(template=PROMPT_TEMPLATE,
                                         input_variables=["chat_history", "context", "question"])
-        print("[DEBUG] __init__ do QdrantChatService concluído.")
 
     def _get_retriever(self, department: Optional[str]):
         """Cria o retriever com filtro de departamento, se aplicável."""
