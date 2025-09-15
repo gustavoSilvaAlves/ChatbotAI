@@ -2,10 +2,12 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-%2300867B?style=for-the-badge)
+![LangGraph](https://img.shields.io/badge/LangGraph-%23239083?style=for-the-badge)
 ![Qdrant](https://img.shields.io/badge/Qdrant-DC2C04?style=for-the-badge)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
 ![Alembic](https://img.shields.io/badge/Alembic-9A0000?style=for-the-badge)
+![Keycloak](https://img.shields.io/badge/Keycloak-00B8D4?style=for-the-badge&logo=keycloak&logoColor=white)
 
 O Mbot é um assistente de IA conversacional projetado para otimizar o acesso a informações internas e acelerar processos de consulta as nossas bases de dados(Salesforce, SAP e Conhecimentos internos) para as diversas equipes da empresa incluindo o atendimento e suporte ao cliente.
 
@@ -71,6 +73,7 @@ Keycloak (OIDC)
 Linguagem
 
 Python 3.10+
+
 
 
 
