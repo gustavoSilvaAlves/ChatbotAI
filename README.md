@@ -1,6 +1,9 @@
 # 🤖 Mbot - Assistente Corporativo com IA
 O Mbot é um assistente de IA conversacional projetado para otimizar o acesso a informações internas e acelerar processos de consulta as nossas bases de dados(Salesforce, SAP e Conhecimentos internos) para as diversas equipes da empresa incluindo o atendimento e suporte ao cliente.
 
+<img width="1907" height="954" alt="Captura de tela 2025-09-15 201206" src="https://github.com/user-attachments/assets/5ea1acca-91dc-41d5-983b-edc8d46e7206" />
+<img width="1904" height="948" alt="Captura de tela 2025-09-15 201252" src="https://github.com/user-attachments/assets/771b24b8-d89c-4d88-b170-2bbb1a367d36" />
+
 # 🎯 Objetivo do Projeto
 O objetivo principal do Mbot é servir como um ponto central e inteligente de consulta para dúvidas sobre processos internos e dados de clientes. Ele capacita a equipe a obter respostas rápidas e precisas, diretamente de fontes de dados oficiais como o Salesforce, eliminando a necessidade de navegar por múltiplas telas ou consultar diferentes departamentos.
 
@@ -19,7 +22,12 @@ Fontes de Dados:
 
 PostgreSQL: Armazena dados relacionais (usuários, histórico de chats).
 
+<img width="1168" height="729" alt="Captura de tela 2025-09-15 201350" src="https://github.com/user-attachments/assets/6b95b57a-3b01-49f0-ae43-c6a59a97851b" />
+
 Qdrant: Banco de dados vetorial para buscas semânticas em documentos de processos.
+
+<img width="1867" height="932" alt="Captura de tela 2025-09-15 201437" src="https://github.com/user-attachments/assets/69d50061-66c1-4d88-a717-b97f45beab8e" />
+
 
 Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades (OPs) e contatos.
 
@@ -52,4 +60,5 @@ Keycloak (OIDC)
 Linguagem
 
 Python 3.10+
+
 
