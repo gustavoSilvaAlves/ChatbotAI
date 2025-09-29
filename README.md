@@ -93,7 +93,7 @@ Para que a autenticação funcione, o seu realm no Keycloak precisa de ter dois 
 Certifique-se de que as variáveis `KEYCLOAK_BASE_URL`, `KEYCLOAK_REALM`, e `KEYCLOAK_CLIENT_ID` nos seus ficheiros `.env` correspondem exatamente a estas configurações.
 
 # 📂 Estrutura do Projeto
-
+```text
 .
 ├── back-end-fast-api/    # Projeto da API com FastAPI e o seu Dockerfile
 ├── front-end-stream-lit/ # Projeto da interface com Streamlit e o seu Dockerfile
@@ -101,4 +101,5 @@ Certifique-se de que as variáveis `KEYCLOAK_BASE_URL`, `KEYCLOAK_REALM`, e `KEY
 ├── .gitignore            # Ficheiros e pastas a serem ignorados pelo Git
 └── README.md             # Este ficheiro
 
+```
 
