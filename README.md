@@ -1,4 +1,6 @@
 # 🤖 Mbot - Assistente Corporativo com IA
+![Python](https://img.shields.io/badge/Python-3.11-blue.svg) ![FastAPI](https://img.shields.io/badge/FastAPI-0.116.1-green.svg) ![LangChain](https://img.shields.io/badge/LangChain-blue?logo=langchain) ![LangGraph](https://img.shields.io/badge/LangGraph-orange?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik00IDdoMnYxMEg0em0zIDBoMnYxMEg3em0zIDBoMnYxMEgxMHptMyAwaDJ2MTBIMTN6bTggMi42OThsLTIuNzk4IDIuNzk3bC0xLjQxNC0xLjQxNEwxOC4xNzIgMTBMMTYuNTggOC40MTNsMS40MTQtMS40MTRaTTIgN2gxNHYxMEgyek0xIDV2MTRoMTZWNWEyIDIgMCAwIDAtMi0ySDNBMiAyIDAgMCAwIDEgNSIvPjwvc3ZnPg==) ![Keycloak](https://img.shields.io/badge/Keycloak-2F81B7.svg?logo=keycloak) ![Docker](https://img.shields.io/badge/Docker-Ready-blue?logo=docker) ![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)
+
 O Mbot é um assistente de IA conversacional projetado para otimizar o acesso a informações internas e acelerar processos de consulta as nossas bases de dados(Salesforce, SAP e Conhecimentos internos) para as diversas equipes da empresa incluindo o atendimento e suporte ao cliente.
 
 # 🎯 Objetivo do Projeto
@@ -102,4 +104,5 @@ Certifique-se de que as variáveis `KEYCLOAK_BASE_URL`, `KEYCLOAK_REALM`, e `KEY
 └── README.md             # Este ficheiro
 
 ```
+
 
