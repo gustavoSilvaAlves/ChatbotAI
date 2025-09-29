@@ -1,0 +1,23 @@
+# Versão do Docker Compose
+version: '3.8'
+
+# Definição dos nossos serviços (contentores)
+services:
+  # Serviço do Back-end
+  backend:
+    build: ./back-end-fast-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./back-end-fast-api/.env
+
+  # Serviço do Front-end
+  frontend:
+    build: ./front-end-stream-lit
+    ports:
+      - "8501:8501"
+    env_file:
+      - ./front-end-stream-lit/.env
+    # Garante que o back-end inicie antes do front-end
+    depends_on:
+      - backend
