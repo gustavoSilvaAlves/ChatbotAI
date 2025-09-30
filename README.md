@@ -10,6 +10,9 @@ Para a Equipe: Reduz o tempo de resposta, aumenta a precisão das informações 
 
 Para a Empresa: Centraliza o conhecimento, diminui a carga de trabalho em consultas repetitivas e cria uma base para futuras integrações, como a consulta de dados no SAP.
 
+<img width="1917" height="888" alt="Captura de tela 2025-09-29 212103" src="https://github.com/user-attachments/assets/8110a44f-9396-4090-8e21-77538042ced2" />
+<img width="1912" height="890" alt="Captura de tela 2025-09-29 212202" src="https://github.com/user-attachments/assets/f0ec0000-3d2f-476c-94ba-26181bc037cf" />
+
 # 🏛️ Arquitetura do Sistema
 O projeto é construído em uma arquitetura desacoplada, garantindo escalabilidade, segurança e manutenibilidade.
 
@@ -21,7 +24,11 @@ Back-end (back-end-fast-api): O cérebro da aplicação. Uma API RESTful assínc
 
 PostgreSQL: Armazena dados relacionais (usuários, histórico de chats).
 
+<img width="1176" height="597" alt="Captura de tela 2025-09-29 212259" src="https://github.com/user-attachments/assets/f5113eec-c5bd-4ed0-acd7-b5d1f4b15e3f" />
+
 Qdrant: Banco de dados vetorial para buscas semânticas em documentos de processos.
+
+<img width="1816" height="786" alt="Captura de tela 2025-09-29 212329" src="https://github.com/user-attachments/assets/3f03b3d8-2c32-49bf-a176-3ca5454e802e" />
 
 Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades (OPs) e contatos.
 
@@ -104,5 +111,6 @@ Certifique-se de que as variáveis `KEYCLOAK_BASE_URL`, `KEYCLOAK_REALM`, e `KEY
 └── README.md             # Este ficheiro
 
 ```
+
 
 
