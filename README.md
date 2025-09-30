@@ -20,17 +20,17 @@ Front-end (front-end-stream-lit): Uma interface web interativa construída com S
 
 Back-end (back-end-fast-api): O cérebro da aplicação. Uma API RESTful assíncrona construída com FastAPI. Suas responsabilidades incluem validar a identidade do usuário, orquestrar a lógica de IA com LangChain, conectar-se às fontes de dados e persistir o histórico das conversas.
 
-###Fontes de Dados:
+### Fontes de Dados:
 
-PostgreSQL: Armazena dados relacionais (usuários, histórico de chats).
+## PostgreSQL: Armazena dados relacionais (usuários, histórico de chats).
 
 <img width="1176" height="597" alt="Captura de tela 2025-09-29 212259" src="https://github.com/user-attachments/assets/f5113eec-c5bd-4ed0-acd7-b5d1f4b15e3f" />
 
-Qdrant: Banco de dados vetorial para buscas semânticas em documentos de processos.
+## Qdrant: Banco de dados vetorial para buscas semânticas em documentos de processos.
 
 <img width="1816" height="786" alt="Captura de tela 2025-09-29 212329" src="https://github.com/user-attachments/assets/3f03b3d8-2c32-49bf-a176-3ca5454e802e" />
 
-Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades (OPs) e contatos.
+## Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades (OPs) e contatos.
 
 # 🛠️ Tecnologias Utilizadas
 
@@ -111,6 +111,7 @@ Certifique-se de que as variáveis `KEYCLOAK_BASE_URL`, `KEYCLOAK_REALM`, e `KEY
 └── README.md             # Este ficheiro
 
 ```
+
 
 
 
