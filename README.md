@@ -8,7 +8,7 @@ O objetivo principal do Mbot é servir como um ponto central e inteligente de co
 
 Para a Equipe: Reduz o tempo de resposta, aumenta a precisão das informações e padroniza o conhecimento.
 
-Para a Empresa: Centraliza o conhecimento, diminui a carga de trabalho em consultas repetitivas, diminui os custos com licenças do Salesforce e SAP e cria uma base para futuras integrações, como a consulta de dados no SAP.
+Para a Empresa: Centraliza o conhecimento, diminui a carga de trabalho em consultas repetitivas, diminui os custos com licenças do Salesforce e SAP e cria uma base para futuras integrações.
 
 <img width="1917" height="888" alt="Captura de tela 2025-09-29 212103" src="https://github.com/user-attachments/assets/8110a44f-9396-4090-8e21-77538042ced2" />
 <img width="1912" height="890" alt="Captura de tela 2025-09-29 212202" src="https://github.com/user-attachments/assets/f0ec0000-3d2f-476c-94ba-26181bc037cf" />
