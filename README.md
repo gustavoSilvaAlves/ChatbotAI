@@ -29,15 +29,14 @@ Back-end (back-end-fast-api): O cérebro da aplicação. Uma API RESTful assínc
 ### Qdrant: Banco de dados vetorial para buscas semânticas em documentos de processos.
 
 <img width="1816" height="786" alt="Captura de tela 2025-09-29 212329" src="https://github.com/user-attachments/assets/3f03b3d8-2c32-49bf-a176-3ca5454e802e" />
-
-### Salesforce: Acessado em tempo real para buscar dados de clientes, oportunidades (OPs) e contatos.
+
 
 # 🛠️ Tecnologias Utilizadas
 
 | Categoria           | Tecnologia                             |
 | ------------------- | -------------------------------------- |
 | **Back-end** | FastAPI, Pydantic, SQLAlchemy, Alembic |
-| **IA & Orquestração** | LangChain                              |
+| **IA & Orquestração** | LangChain e LangGraph                           |
 | **Front-end** | Streamlit                              |
 | **Bancos de Dados** | PostgreSQL, Qdrant (Banco Vetorial)    |
 | **Autenticação** | Keycloak (OIDC)                        |
