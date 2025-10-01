@@ -4,11 +4,11 @@
 O Mbot é um assistente de IA conversacional projetado para otimizar o acesso a informações internas e acelerar processos de consulta as nossas bases de dados(Salesforce, SAP e Conhecimentos internos) para as diversas equipes da empresa incluindo o atendimento e suporte ao cliente.
 
 # 🎯 Objetivo do Projeto
-O objetivo principal do Mbot é servir como um ponto central e inteligente de consulta para dúvidas sobre processos internos e dados de clientes. Ele capacita a equipe a obter respostas rápidas e precisas, diretamente de fontes de dados oficiais como o Salesforce, eliminando a necessidade de navegar por múltiplas telas ou consultar diferentes departamentos.
+O objetivo principal do Mbot é servir como um ponto central e inteligente de consulta para dúvidas sobre processos internos, Notas Fiscais, Editais/oportunidades e dados de clientes. Ele capacita a equipe a obter respostas rápidas e precisas, diretamente de fontes de dados oficiais como o Salesforce, eliminando a necessidade de navegar por múltiplas telas ou consultar diferentes departamentos.
 
 Para a Equipe: Reduz o tempo de resposta, aumenta a precisão das informações e padroniza o conhecimento.
 
-Para a Empresa: Centraliza o conhecimento, diminui a carga de trabalho em consultas repetitivas e cria uma base para futuras integrações, como a consulta de dados no SAP.
+Para a Empresa: Centraliza o conhecimento, diminui a carga de trabalho em consultas repetitivas, diminui os custos com licenças do Salesforce e SAP e cria uma base para futuras integrações, como a consulta de dados no SAP.
 
 <img width="1917" height="888" alt="Captura de tela 2025-09-29 212103" src="https://github.com/user-attachments/assets/8110a44f-9396-4090-8e21-77538042ced2" />
 <img width="1912" height="890" alt="Captura de tela 2025-09-29 212202" src="https://github.com/user-attachments/assets/f0ec0000-3d2f-476c-94ba-26181bc037cf" />
@@ -18,7 +18,7 @@ O projeto é construído em uma arquitetura desacoplada, garantindo escalabilida
 
 Front-end (front-end-stream-lit): Uma interface web interativa construída com Streamlit. É responsável por gerenciar a autenticação do usuário(juntamente com o Keycloak), exibir a conversa e comunicar-se com o back-end.
 
-Back-end (back-end-fast-api): O cérebro da aplicação. Uma API RESTful assíncrona construída com FastAPI. Suas responsabilidades incluem validar a identidade do usuário, orquestrar a lógica de IA com LangChain, conectar-se às fontes de dados e persistir o histórico das conversas.
+Back-end (back-end-fast-api): O cérebro da aplicação. Uma API RESTful assíncrona construída com FastAPI. Suas responsabilidades incluem validar a identidade do usuário, orquestrar a lógica de IA com LangChain e LangGraph, conectar-se às fontes de dados e persistir o histórico das conversas.
 
 ### Fontes de Dados:
 
